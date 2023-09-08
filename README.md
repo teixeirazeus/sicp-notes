@@ -1,0 +1,1 @@
+![](./assets/Iwakura_Lain_Reading_SICP.png)
