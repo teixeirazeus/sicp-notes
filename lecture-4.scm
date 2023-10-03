@@ -26,3 +26,38 @@
     ( (* 1 (? e))   (: e))
     ( (* 0 (? e))   0)
 ))
+
+;match
+(+ (* (?x) (?y)) (?y))
+(+ (* 3 x) x)
+;x=3 and y=x
+
+((atom? pat)
+    (if (atom? exp)
+        (if (eq? pat exp)
+            dict 
+            'failed)
+        'failed))
+
+(define (simplifier the-rules)
+    (define (simplify-exp exp)
+        ***)
+    (define (simplify-parts exp)
+        ***)
+    (define (try-rules exp)
+        ***)
+    simplify-exp)
+
+(define (scan rules)
+    (if (null? rules)
+        exp
+        (let ((dict 
+            (match (pattern (car rules))
+                exp 
+                (empty-dictionary))))
+        (if (eq? dict 'failed)
+            (scan (cdr rules))
+            (simplify-exp
+                (instantiate
+                    (skeleton (car rules))
+                    dict))))))
